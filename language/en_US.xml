@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language>
+    
+    <!-- #################################### -->
+    <!-- Settings module language definitions -->
+    <!-- #################################### -->
+    
+    <display_name>Widgets manager</display_name>
+    <icon>fa-cubes</icon>
+    <description>
+        Administrative interface for widgets on the right sidebar.
+    </description>
+    
+    <admin>
+        <menu_items>
+            <admin_menu_caption>Widgets</admin_menu_caption>
+        </menu_items>
+        <page_title>Widgets manager</page_title>
+    </admin>
+
+    <settings_data>
+        <title>Widgets</title>
+        
+        <specs key="rs_layout">
+            <title>Right sidebar layout</title>
+            <description><![CDATA[
+                Active widgets on the right sidebar. One per line using the next syntax:<br>
+                <code>widget_id | widget_seed_id | title | user_scope | page_scope | pages_list </code>
+                <ul>
+                    <li>
+                        <code>user_scope</code> must be any of <code>all</code>, <code>online</code> and <code>offline</code>.<br>
+                    </li>
+                    <li>
+                        <code>page_scope</code> must be either <code>show</code> or <code>hide</code>.<br>
+                    </li>
+                    <li>
+                        <code>pages_list</code> is a comma-separated list of <u>internal</u> page tags:<br>
+                        <code>home</code>, <code>post_author_index</code>, <code>post_category_index</code>, 
+                        <code>post_archive</code>, <code>media_author_index</code>, <code>media_category_index</code>, 
+                        <code>media_archive</code>, <code>search_results</code>, <code>user_home</code>, 
+                        <code>user_mentions</code>
+                    </li>
+                </ul>
+            ]]></description>
+            <type>code</type>
+            
+        </specs>
+    </settings_data>
+    
+    <widgets>
+        <text>
+            <title>Text</title>
+            <info>Arbitrary text/HTML/PHP code.</info>
+        </text>
+        <login>
+            <title>Login box</title>
+            <info>Shows login form for visitors and avatar/name/logout link for logged in users.</info>
+        </login>
+        <search>
+            <title>Search</title>
+            <info>Adds a configurable search form.</info>
+        </search>
+        <searches_cloud>
+            <title>Searches cloud</title>
+            <info>Configurable cloud of popular search terms.</info>
+        </searches_cloud>
+        <tags_cloud>
+            <title>Tags cloud</title>
+            <info>Configurable tags cloud.</info>
+        </tags_cloud>
+    </widgets>
+    
+    <messages>
+        <rs_widget_type_not_supported>The specified widget type is not supported on the right sidebar.</rs_widget_type_not_supported>
+        <widget_file_not_found>Can't find file "{$file}" for widget "{$widget}" in {$module}/widgets</widget_file_not_found>
+    </messages>
+    
+</language>

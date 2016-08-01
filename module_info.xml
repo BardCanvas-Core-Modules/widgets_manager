@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+
+    <version>0.1 beta</version>
+    <group>System</group>
+    <admin_only>true</admin_only>
+    
+    <working_flags>
+        <install>true</install>
+        <uninstall>false</uninstall>
+        <enable>false</enable>
+        <disable>false</disable>
+    </working_flags>
+    
+    <menu_items>
+        <item>
+            <caption_language_var>admin_menu_caption</caption_language_var>
+            <url></url>
+        </item>
+    </menu_items>
+    
+    <php_includes>
+        <!--<bootstrap></bootstrap>-->
+    </php_includes>
+    
+    <template_includes>
+        <pre_rendering>prepare_widgets.inc</pre_rendering>
+        <!--<html_head></html_head>-->
+        <!--<pre_header></pre_header>-->
+        <!--<header_top></header_top>-->
+        <!--<header_menu></header_menu>-->
+        <!--<header_bottom></header_bottom>-->
+        <!--<pre_content></pre_content>-->
+        <!--<content_top></content_top>-->
+        <!--<home_content></home_content>-->
+        <!--<content_bottom></content_bottom>-->
+        <!--<post_content></post_content>-->
+        <!--<pre_footer></pre_footer>-->
+        <!--<footer_top></footer_top>-->
+        <!--<footer_bottom></footer_bottom>-->
+        <!--<post_footer></post_footer>-->
+        <!--<pre_eof></pre_eof>-->
+        <!--<post_rendering></post_rendering>-->
+    </template_includes>
+
+    <widgets>
+
+        <widget for="right_sidebar" id="text" type="php" is_clonable="true" file="text/widget.inc"
+                config="text/widget.inc"/>
+
+        <widget for="right_sidebar" id="search" type="php" is_clonable="true" file="search/widget.inc"
+                config="search/widget.inc" added_classes="highlighted"/>
+
+        <widget for="right_sidebar" id="searches_cloud" type="php" is_clonable="true" file="searches_cloud/widget.inc"
+                config="searches_cloud/widget.inc"/>
+
+        <widget for="right_sidebar" id="tags_cloud" type="php" is_clonable="true" file="tags_cloud/widget.inc"
+                config="tags_cloud/widget.inc"/>
+
+    </widgets>
+
+</module>
