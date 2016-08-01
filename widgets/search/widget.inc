@@ -27,9 +27,11 @@ global $config, $language;
 ob_start(); ?>
     
     <div class="sidebar_search" style="padding: 10px;">
-        <form class="search_form" method="get" action="<?= $config->full_root_path ?>">
-            <input type="text" name="s" placeholder="<?= htmlspecialchars($language->search_placeholder) ?>">
-            <span class="submit_icon fa fa-search fa-fw pseudo_link" onclick="$(this).closest('form').submit()"></span>
+        <form class="search_form" method="get" action="<?= $config->full_root_path ?>/search/">
+            <div class="form_wrapper">
+                <input type="text" name="s" placeholder="<?= htmlspecialchars($language->search_placeholder) ?>">
+                <span class="submit_icon fa fa-search fa-fw pseudo_link" onclick="$(this).closest('form').submit()"></span>
+            </div>
         </form>
     </div>
 
