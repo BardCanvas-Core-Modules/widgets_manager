@@ -25,7 +25,7 @@
             <title>Right sidebar layout</title>
             <description><![CDATA[
                 Active widgets on the right sidebar. One per line using the next syntax:<br>
-                <code>widget_id | widget_seed_id | title | user_scope | page_scope | pages_list </code>
+                <code>module_name.widget_id | widget_seed_id | title | user_scope | page_scope | pages_list </code>
                 <ul>
                     <li>
                         <code>user_scope</code> must be any of <code>all</code>, <code>online</code> and <code>offline</code>.<br>
@@ -52,25 +52,10 @@
             <title>Text</title>
             <info>Arbitrary text/HTML/PHP code.</info>
         </text>
-        <login>
-            <title>Login box</title>
-            <info>Shows login form for visitors and avatar/name/logout link for logged in users.</info>
-        </login>
-        <search>
-            <title>Search</title>
-            <info>Adds a configurable search form.</info>
-        </search>
-        <searches_cloud>
-            <title>Searches cloud</title>
-            <info>Configurable cloud of popular search terms.</info>
-        </searches_cloud>
-        <tags_cloud>
-            <title>Tags cloud</title>
-            <info>Configurable tags cloud.</info>
-        </tags_cloud>
     </widgets>
     
     <messages>
+        <module_not_found>Module "{$module_name}" not found for widget "{$id}" with title "{$title}". Either the module is disabled or not installed.</module_not_found>
         <rs_widget_type_not_supported>The specified widget type is not supported on the right sidebar.</rs_widget_type_not_supported>
         <widget_file_not_found>Can't find file "{$file}" for widget "{$widget}" in {$module}/widgets</widget_file_not_found>
     </messages>

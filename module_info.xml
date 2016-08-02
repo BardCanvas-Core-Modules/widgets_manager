@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <module>
-
+    
     <version>0.1 beta</version>
     <group>System</group>
     <admin_only>true</admin_only>
@@ -42,21 +42,12 @@
         <!--<pre_eof></pre_eof>-->
         <!--<post_rendering></post_rendering>-->
     </template_includes>
-
+    
     <widgets>
-
+        
         <widget for="right_sidebar" id="text" type="php" is_clonable="true" file="text/widget.inc"
                 config="text/widget.inc"/>
-
-        <widget for="right_sidebar" id="search" type="php" is_clonable="true" file="search/widget.inc"
-                config="search/widget.inc" added_classes="highlighted"/>
-
-        <widget for="right_sidebar" id="searches_cloud" type="php" is_clonable="true" file="searches_cloud/widget.inc"
-                config="searches_cloud/widget.inc"/>
-
-        <widget for="right_sidebar" id="tags_cloud" type="php" is_clonable="true" file="tags_cloud/widget.inc"
-                config="tags_cloud/widget.inc"/>
-
+        
     </widgets>
-
+    
 </module>
