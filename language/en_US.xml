@@ -21,7 +21,7 @@
     <settings_data>
         <title>Widgets</title>
         
-        <specs key="rs_layout">
+        <specs key="rs_layout" references="page_tag">
             <title>Right sidebar layout</title>
             <description><![CDATA[
                 Active widgets on the right sidebar. One per line using the next syntax:<br>
