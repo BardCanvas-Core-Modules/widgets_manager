@@ -44,7 +44,8 @@
                         <code>media_author_index</code>, <code>media_category_index</code>, <code>media_tag_index</code>,
                         <code>media_archive</code>, <code>search_results</code>, <code>user_home</code>,
                          
-                        <code>user_mentions</code>
+                        <code>user_mentions</code>,
+                        <code>compound_tag_index</code>
                     </li>
                 </ul>
             ]]></description>
