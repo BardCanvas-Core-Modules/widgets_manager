@@ -35,10 +35,15 @@
                     </li>
                     <li>
                         <code>pages_list</code> is a comma-separated list of <u>internal</u> page tags:<br>
-                        <code>home</code>, <code>post_author_index</code>, <code>post_category_index</code>, 
+                        
+                        <code>home</code>,
+                        
+                        <code>post_author_index</code>, <code>post_category_index</code>, <code>post_tag_index</code>,
                         <code>post_archive</code>, <code>single_post</code>,
-                        <code>media_author_index</code>, <code>media_category_index</code>, 
-                        <code>media_archive</code>, <code>search_results</code>, <code>user_home</code>, 
+                        
+                        <code>media_author_index</code>, <code>media_category_index</code>, <code>media_tag_index</code>,
+                        <code>media_archive</code>, <code>search_results</code>, <code>user_home</code>,
+                         
                         <code>user_mentions</code>
                     </li>
                 </ul>
