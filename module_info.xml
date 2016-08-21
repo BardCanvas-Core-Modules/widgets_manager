@@ -12,12 +12,14 @@
         <disable>false</disable>
     </working_flags>
     
+    <!--
     <menu_items>
         <item>
             <caption_language_var>admin_menu_caption</caption_language_var>
             <url></url>
         </item>
     </menu_items>
+    -->
     
     <!--
     <php_includes>
