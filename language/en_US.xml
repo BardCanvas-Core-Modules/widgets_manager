@@ -21,6 +21,31 @@
     <settings_data>
         <title>Widgets</title>
         
+        <specs key="ls_layout">
+            <title>Left sidebar layout</title>
+            <description><![CDATA[
+                    Active widgets on the left sidebar. One per line using the next syntax:<br>
+                    <code>module_name.widget_id | widget_seed_id | title | user_scope | page_scope | pages_list </code>
+                    <ul>
+                        <li>
+                            <code>user_scope</code> must be any of <code>all</code>, <code>online</code> and <code>offline</code>.<br>
+                        </li>
+                        <li>
+                            <code>page_scope</code> must be either <code>show</code> or <code>hide</code>.<br>
+                        </li>
+                        <li>
+                            <code>pages_list</code> is a comma-separated list of <u>internal</u> page tags:<br>
+                            <code>home</code>, <code>post_author_index</code>, <code>post_category_index</code>, 
+                            <code>post_archive</code>, <code>single_post</code>,
+                            <code>media_author_index</code>, <code>media_category_index</code>, 
+                            <code>media_archive</code>, <code>search_results</code>, <code>user_home</code>, 
+                            <code>user_mentions</code>
+                        </li>
+                    </ul>
+                ]]></description>
+            <type>code</type>
+        </specs>
+        
         <specs key="rs_layout" references="page_tag">
             <title>Right sidebar layout</title>
             <description><![CDATA[
@@ -49,31 +74,6 @@
                     </li>
                 </ul>
             ]]></description>
-            <type>code</type>
-        </specs>
-        
-        <specs key="ls_layout">
-            <title>Left sidebar layout</title>
-            <description><![CDATA[
-                    Active widgets on the left sidebar. One per line using the next syntax:<br>
-                    <code>module_name.widget_id | widget_seed_id | title | user_scope | page_scope | pages_list </code>
-                    <ul>
-                        <li>
-                            <code>user_scope</code> must be any of <code>all</code>, <code>online</code> and <code>offline</code>.<br>
-                        </li>
-                        <li>
-                            <code>page_scope</code> must be either <code>show</code> or <code>hide</code>.<br>
-                        </li>
-                        <li>
-                            <code>pages_list</code> is a comma-separated list of <u>internal</u> page tags:<br>
-                            <code>home</code>, <code>post_author_index</code>, <code>post_category_index</code>, 
-                            <code>post_archive</code>, <code>single_post</code>,
-                            <code>media_author_index</code>, <code>media_category_index</code>, 
-                            <code>media_archive</code>, <code>search_results</code>, <code>user_home</code>, 
-                            <code>user_mentions</code>
-                        </li>
-                    </ul>
-                ]]></description>
             <type>code</type>
         </specs>
         
