@@ -36,14 +36,14 @@
                         
                         <code>home</code> (página principal del website),
                         
-                        <code>post_author_index</code> (índice de entradas por autor), <code>post_category_index</code> (índice de entradas por categoría), <code>post_tag_index</code> (índice de entradas por hashtag),
+                        <code>post_author_index</code> (índice de entradas por autor), <code>post_category_index</code> (índice de entradas por categoría), <code>post_tag_index</code> (índice de entradas por etiqueta),
                         <code>post_archive</code> (histórico de entradas), <code>single_post</code> (entradas individual),
                         
-                        <code>media_author_index</code> (índice de medios por autor), <code>media_category_index</code> (índice de medios por categoría), <code>media_tag_index</code> (índice de medios por hashtag),
+                        <code>media_author_index</code> (índice de medios por autor), <code>media_category_index</code> (índice de medios por categoría), <code>media_tag_index</code> (índice de medios por etiqueta),
                         <code>media_archive</code> (histórico de medios), <code>search_results</code> (resultados de búsqueda), <code>user_home</code> (página principal de perfil de usuario),
                          
                         <code>user_mentions</code> (página de menciones de usuario),
-                        <code>compound_tag_index</code> (índice de resultados compuestos de hashtags)
+                        <code>compound_tag_index</code> (índice de resultados compuestos de etiquetas)
                     </li>
                 </ul>
             ]]></description>
@@ -69,14 +69,14 @@
                         
                         <code>home</code> (página principal del website),
                         
-                        <code>post_author_index</code> (índice de entradas por autor), <code>post_category_index</code> (índice de entradas por categoría), <code>post_tag_index</code> (índice de entradas por hashtag),
+                        <code>post_author_index</code> (índice de entradas por autor), <code>post_category_index</code> (índice de entradas por categoría), <code>post_tag_index</code> (índice de entradas por etiqueta),
                         <code>post_archive</code> (histórico de entradas), <code>single_post</code> (entradas individual),
                         
-                        <code>media_author_index</code> (índice de medios por autor), <code>media_category_index</code> (índice de medios por categoría), <code>media_tag_index</code> (índice de medios por hashtag),
+                        <code>media_author_index</code> (índice de medios por autor), <code>media_category_index</code> (índice de medios por categoría), <code>media_tag_index</code> (índice de medios por etiqueta),
                         <code>media_archive</code> (histórico de medios), <code>search_results</code> (resultados de búsqueda), <code>user_home</code> (página principal de perfil de usuario),
                          
                         <code>user_mentions</code> (página de menciones de usuario),
-                        <code>compound_tag_index</code> (índice de resultados compuestos de hashtags)
+                        <code>compound_tag_index</code> (índice de resultados compuestos de etiquetas)
                     </li>
                 </ul>
             ]]></description>
