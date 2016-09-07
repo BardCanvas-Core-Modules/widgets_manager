@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language>
+    
+    <display_name>Widgets</display_name>
+    <icon>fa-cubes</icon>
+    <description>
+        Interfaz administrativa para "widgets" en las barras laterales.
+    </description>
+    
+    <admin>
+        <menu_items>
+            <admin_menu_caption>Widgets</admin_menu_caption>
+        </menu_items>
+        <page_title>Administrador de widgets</page_title>
+    </admin>
+
+    <settings_data>
+        <title>Widgets</title>
+        
+        <specs key="ls_layout">
+            <title>Distribución en barra izquierda</title>
+            <description><![CDATA[
+                Widget activos en la barra lateral. Se especifica uno en cada línea usando la siguiente sintaxis:<br>
+                <code>nombre_modulo.id_widget | id_semilla | título | alcance_usuarios | alcance_pagina | lista_paginas </code>
+                <ul>
+                    <li>
+                        <code>alcance_usuarios</code> debe ser uno de <code>all</code> (todos), <code>online</code>
+                        (conectados) y <code>offline</code> (desconectados).<br>
+                    </li>
+                    <li>
+                        <code>alcance_pagina</code> debe ser cualquiera de <code>show</code> (mostrar) o <code>hide</code>
+                        (ocultar).<br>
+                    </li>
+                    <li>
+                        <code>lista_paginas</code> es una lista de los <u>tags internos</u> de página separados por comas:<br>
+                        
+                        <code>home</code> (página principal del website),
+                        
+                        <code>post_author_index</code> (índice de entradas por autor), <code>post_category_index</code> (índice de entradas por categoría), <code>post_tag_index</code> (índice de entradas por hashtag),
+                        <code>post_archive</code> (histórico de entradas), <code>single_post</code> (entradas individual),
+                        
+                        <code>media_author_index</code> (índice de medios por autor), <code>media_category_index</code> (índice de medios por categoría), <code>media_tag_index</code> (índice de medios por hashtag),
+                        <code>media_archive</code> (histórico de medios), <code>search_results</code> (resultados de búsqueda), <code>user_home</code> (página principal de perfil de usuario),
+                         
+                        <code>user_mentions</code> (página de menciones de usuario),
+                        <code>compound_tag_index</code> (índice de resultados compuestos de hashtags)
+                    </li>
+                </ul>
+            ]]></description>
+            <type>code</type>
+        </specs>
+        
+        <specs key="rs_layout" references="page_tag">
+            <title>Distribución en barra derecha</title>
+            <description><![CDATA[
+                Widget activos en la barra lateral. Se especifica uno en cada línea usando la siguiente sintaxis:<br>
+                <code>nombre_modulo.id_widget | id_semilla | título | alcance_usuarios | alcance_pagina | lista_paginas </code>
+                <ul>
+                    <li>
+                        <code>alcance_usuarios</code> debe ser uno de <code>all</code> (todos), <code>online</code>
+                        (conectados) y <code>offline</code> (desconectados).<br>
+                    </li>
+                    <li>
+                        <code>alcance_pagina</code> debe ser cualquiera de <code>show</code> (mostrar) o <code>hide</code>
+                        (ocultar).<br>
+                    </li>
+                    <li>
+                        <code>lista_paginas</code> es una lista de los <u>tags internos</u> de página separados por comas:<br>
+                        
+                        <code>home</code> (página principal del website),
+                        
+                        <code>post_author_index</code> (índice de entradas por autor), <code>post_category_index</code> (índice de entradas por categoría), <code>post_tag_index</code> (índice de entradas por hashtag),
+                        <code>post_archive</code> (histórico de entradas), <code>single_post</code> (entradas individual),
+                        
+                        <code>media_author_index</code> (índice de medios por autor), <code>media_category_index</code> (índice de medios por categoría), <code>media_tag_index</code> (índice de medios por hashtag),
+                        <code>media_archive</code> (histórico de medios), <code>search_results</code> (resultados de búsqueda), <code>user_home</code> (página principal de perfil de usuario),
+                         
+                        <code>user_mentions</code> (página de menciones de usuario),
+                        <code>compound_tag_index</code> (índice de resultados compuestos de hashtags)
+                    </li>
+                </ul>
+            ]]></description>
+            <type>code</type>
+        </specs>
+        
+    </settings_data>
+    
+    <widgets>
+        <text>
+            <title>Texto</title>
+            <info>Texto plano o código HTML/PHP arbitrario.</info>
+        </text>
+    </widgets>
+    
+    <messages>
+        <module_not_found>El módulo "{$module_name}" no se ha encontrado para el widget "{$id}" con el título "{$title}". El módulo o no está habilitado o no está instalado.</module_not_found>
+        <template_file_not_found>El archivo {$file} no se ha encontrado en la plantilla. Favor de checar que la plantilla tenga capacidad para este tipo de widget.</template_file_not_found>
+        <rs_widget_type_not_supported>El tipo de widget especificado no está soportado en la barra lateral derecha.</rs_widget_type_not_supported>
+        <widget_file_not_found>No se encuentra el archivo "{$file}" para el widget "{$widget}" en {$module}/widgets</widget_file_not_found>
+    </messages>
+    
+</language>
