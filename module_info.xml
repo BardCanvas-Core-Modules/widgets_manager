@@ -8,8 +8,8 @@
     <working_flags>
         <install>true</install>
         <uninstall>false</uninstall>
-        <enable>false</enable>
-        <disable>false</disable>
+        <enable>true</enable>
+        <disable>true</disable>
     </working_flags>
     
     <!--
