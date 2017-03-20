@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <module>
     
-    <version>1.1.2</version>
+    <version>1.2.0</version>
     <group>core_modules</group>
     <admin_only>true</admin_only>
     
@@ -48,6 +48,9 @@
     </template_includes>
     
     <widgets>
+        
+        <widget for="left_sidebar" id="left_links" type="php" is_clonable="true" file="left_links/widget.inc"
+                config="left_links/widget.inc"/>
         
         <widget for="right_sidebar" id="text" type="php" is_clonable="true" file="text/widget.inc"
                 config="text/widget.inc"/>
