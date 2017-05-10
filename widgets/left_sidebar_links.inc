@@ -14,18 +14,29 @@
  * @var \SimpleXMLElement $widget
  * @var string            $seed
  * @var string            $data_key
+ * 
+ * @var toolbox           $toolbox
  *
  * @return string
  */
 
 use hng2_base\module;
 use hng2_base\template;
+use hng2_modules\widgets_manager\toolbox;
 
-global $settings;
+global $config;
 
-$result = $settings->get($data_key);
+if( empty($config->globals["widgets_manager:toolbox"]) )
+    $config->globals["widgets_manager:toolbox"] = new toolbox();
+$toolbox = $config->globals["widgets_manager:toolbox"];
 
-if( preg_match('/(<\?|<\?php)\s+(.*)\s*(\?>)?/i', $result, $matches) )
+$placed_widget = $toolbox->get_widget_from_data_key($data_key);
+if( is_null($placed_widget) ) return "";
+
+$data = $toolbox->load_widget_data($placed_widget);
+if( empty($data["contents"]) ) return "";
+
+if( preg_match('/(<\?|<\?php)\s+(.*)\s*(\?>)?/i', $data["contents"], $matches) )
     return eval($matches[2]);
 
-return $result;
+return $data["contents"];

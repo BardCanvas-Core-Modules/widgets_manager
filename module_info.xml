@@ -12,14 +12,12 @@
         <disable>true</disable>
     </working_flags>
     
-    <!--
     <menu_items>
         <item>
             <caption_language_var>admin_menu_caption</caption_language_var>
             <url></url>
         </item>
     </menu_items>
-    -->
     
     <!--
     <php_includes>
@@ -49,11 +47,9 @@
     
     <widgets>
         
-        <widget for="left_sidebar" id="left_links" type="php" is_clonable="true" file="left_links/widget.inc"
-                config="left_links/widget.inc"/>
+        <widget for="left_sidebar" id="left_links" type="php" is_clonable="true" file="left_sidebar_links.inc" />
         
-        <widget for="right_sidebar" id="text" type="php" is_clonable="true" file="text/widget.inc"
-                config="text/widget.inc"/>
+        <widget for="right_sidebar" id="text" type="php" is_clonable="true" file="right_sidebar_text.inc" />
         
     </widgets>
     

@@ -12,69 +12,85 @@
             <admin_menu_caption>Widgets</admin_menu_caption>
         </menu_items>
         <page_title>Widgets manager</page_title>
+        <left_sidebar>Left sidebar</left_sidebar>
+        <right_sidebar>Right sidebar</right_sidebar>
+        <actions>
+            <add>Add widget</add>
+        </actions>
+        <none_placed>There are no widgets placed on this sidebar. Click on "Add widget" to add one.</none_placed>
+        <untitled>(Untitled)</untitled>
+        <user_scopes>
+            <all>All users</all>
+            <online>Online users only</online>
+            <offline>Offline users only</offline>
+        </user_scopes>
+        <page_scopes>
+            <everywhere>Visible everywhere</everywhere>
+            <show>Show only on pages:</show>
+            <hide>Hide on pages:</hide>
+        </page_scopes>
+        <alt_page_scopes>
+            <show>
+                Show on all pages (unless at least one is selected from the list,
+                in which case, the widget will only be shown on those).
+            </show>
+            <hide>Show on all pages except the selected ones from the list.</hide>
+        </alt_page_scopes>
+        <editor>
+            <dialog_title>Widget editor</dialog_title>
+            <basic_details>Basic details</basic_details>
+            <handler>Widget handler:</handler>
+            <seed>Seed:</seed>
+            <title>Title:</title>
+            <user_scope>User scope:</user_scope>
+            <page_scope>Page scope:</page_scope>
+            <pages>Pages list:</pages>
+            <other_pages_by_tag>
+                <caption>Other pages by tag:</caption>
+                <info><![CDATA[
+                    If there are pages not present on the list but you know their tag,
+                    use the tool below to include them.
+                ]]></info>
+                <add>Add</add>
+            </other_pages_by_tag>
+            <custom_settings>Custom settings</custom_settings>
+        </editor>
+        <add_widget_to_left>Add widget to left sidebar</add_widget_to_left>
+        <add_widget_to_right>Add widget to right sidebar</add_widget_to_right>
     </admin>
-
+    
+    <page_tags>
+        <home>Website home</home>
+        <post_author_index>Post author index</post_author_index>
+        <post_category_index>Post category index</post_category_index>
+        <post_tag_index>Post tag index</post_tag_index>
+        <post_archive>Post archive</post_archive>
+        <single_post>Single post</single_post>
+        <media_author_index>Media author index</media_author_index>
+        <media_category_index>Media category index</media_category_index>
+        <media_tag_index>Media tag index</media_tag_index>
+        <media_archive>Media archive</media_archive>
+        <search_results>Search results</search_results>
+        <user_home>User home</user_home>
+        <user_mentions>User mentions</user_mentions>
+        <compound_tag_index>Compound tag index</compound_tag_index>
+    </page_tags>
+    
     <settings_data>
         <title>Widgets</title>
         
-        <specs key="ls_layout">
+        <specs key="ls_layout" is_locked="true">
             <title>Left sidebar layout</title>
             <description><![CDATA[
-                Active widgets on the sidebar. One per line using the next syntax:<br>
-                <code>module_name.widget_id | widget_seed_id | title | user_scope | page_scope | pages_list </code>
-                <ul>
-                    <li>
-                        <code>user_scope</code> must be any of <code>all</code>, <code>online</code> and <code>offline</code>.<br>
-                    </li>
-                    <li>
-                        <code>page_scope</code> must be either <code>show</code> or <code>hide</code>.<br>
-                    </li>
-                    <li>
-                        <code>pages_list</code> is a comma-separated list of <u>internal</u> page tags:<br>
-                        
-                        <code>home</code>,
-                        
-                        <code>post_author_index</code>, <code>post_category_index</code>, <code>post_tag_index</code>,
-                        <code>post_archive</code>, <code>single_post</code>,
-                        
-                        <code>media_author_index</code>, <code>media_category_index</code>, <code>media_tag_index</code>,
-                        <code>media_archive</code>, <code>search_results</code>, <code>user_home</code>,
-                         
-                        <code>user_mentions</code>,
-                        <code>compound_tag_index</code>
-                    </li>
-                </ul>
+                Active widgets registry on the left sidebar. Shown as reference.
             ]]></description>
             <type>code</type>
         </specs>
         
-        <specs key="rs_layout" references="page_tag">
+        <specs key="rs_layout" references="page_tag" is_locked="true">
             <title>Right sidebar layout</title>
             <description><![CDATA[
-                Active widgets on the sidebar. One per line using the next syntax:<br>
-                <code>module_name.widget_id | widget_seed_id | title | user_scope | page_scope | pages_list </code>
-                <ul>
-                    <li>
-                        <code>user_scope</code> must be any of <code>all</code>, <code>online</code> and <code>offline</code>.<br>
-                    </li>
-                    <li>
-                        <code>page_scope</code> must be either <code>show</code> or <code>hide</code>.<br>
-                    </li>
-                    <li>
-                        <code>pages_list</code> is a comma-separated list of <u>internal</u> page tags:<br>
-                        
-                        <code>home</code>,
-                        
-                        <code>post_author_index</code>, <code>post_category_index</code>, <code>post_tag_index</code>,
-                        <code>post_archive</code>, <code>single_post</code>,
-                        
-                        <code>media_author_index</code>, <code>media_category_index</code>, <code>media_tag_index</code>,
-                        <code>media_archive</code>, <code>search_results</code>, <code>user_home</code>,
-                         
-                        <code>user_mentions</code>,
-                        <code>compound_tag_index</code>
-                    </li>
-                </ul>
+                Active widgets registry on the right sidebar. Shown as reference.
             ]]></description>
             <type>code</type>
         </specs>
@@ -85,7 +101,38 @@
         <text>
             <title>Text</title>
             <info>Arbitrary text/HTML/PHP code.</info>
+            <editable_specs>
+                <specs key="contents">
+                    <title>Contents</title>
+                    <description><![CDATA[
+                        Plain text or HTML markup or PHP code. If you want to use PHP,
+                        you must use only PHP and open the code with the PHP open tag (<code>&lt?php</code>).
+                    ]]></description>
+                    <type>code</type>
+                </specs>
+            </editable_specs>
         </text>
+        <left_links>
+            <title>Links list</title>
+            <info>HTML list of hardcoded links</info>
+            <editable_specs>
+                <specs key="contents">
+                    <title>Contents</title>
+                    <description><![CDATA[
+                        HTML code for items to list.
+                        Every <code>&lt;span></code> or anchor (<code>&lt;a></code>)
+                        should have the <code>item</code> class.<br>
+                        Every item is shown on a single line.<br>
+                        Examples:
+                        <pre>&lt;a class="item" href="<code>some-url</code>"><code>Normal link</code>&lt;/a>
+                        &lt;a class="item important" href="<code>some-url</code>"><code>Important link</code>&lt;/a>
+                        &lt;a class="item selected" href="<code>some-url</code>"><code>Selected link</code>&lt;/a>
+                        &lt;a class="item highlighted" href="<code>some-url</code>"><code>Highlighted link</code>&lt;/a></pre>
+                    ]]></description>
+                    <type>code</type>
+                </specs>
+            </editable_specs>
+        </left_links>
     </widgets>
     
     <messages>
@@ -93,6 +140,12 @@
         <template_file_not_found>The template file {$file} wasn't found. Please check that the template has capability for this kind of widget.</template_file_not_found>
         <rs_widget_type_not_supported>The specified widget type is not supported on the right sidebar.</rs_widget_type_not_supported>
         <widget_file_not_found>Can't find file "{$file}" for widget "{$widget}" in {$module}/widgets</widget_file_not_found>
+        <invalid_data_received>Invalid data received! The data is not coming as expected</invalid_data_received>
+        <widget_data_saved>Successfully saved widget "{$widget}" custom data</widget_data_saved>
+        <widget_data_deleted>Successfully deleted custom data for widget "{$widget}"</widget_data_deleted>
+        <sidebar_widgets_saved>Successfully saved widgets for "{$sidebar}"</sidebar_widgets_saved>
+        <invalid_sidebar>Sorry, but you provided an invalid sidebar key</invalid_sidebar>
+        <no_widgets_found>Sorry, but there are no available widgets to place</no_widgets_found>
     </messages>
     
 </language>

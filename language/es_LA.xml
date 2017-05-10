@@ -12,73 +12,85 @@
             <admin_menu_caption>Widgets</admin_menu_caption>
         </menu_items>
         <page_title>Administrador de widgets</page_title>
+        <left_sidebar>Barra izquierda</left_sidebar>
+        <right_sidebar>Barra derecha</right_sidebar>
+        <actions>
+            <add>Agregar widget</add>
+        </actions>
+        <none_placed>No hay ningún widget colocado. Da click en "Agregar widget" para añadir uno.</none_placed>
+        <untitled>(Sin título)</untitled>
+        <user_scopes>
+            <all>Todos los usuarios</all>
+            <online>Sólo conectados</online>
+            <offline>Sólo desconectados</offline>
+        </user_scopes>
+        <page_scopes>
+            <everywhere>Visible en todos lados</everywhere>
+            <show>Mostrar sólo en páginas:</show>
+            <hide>Ocultar en páginas:</hide>
+        </page_scopes>
+        <alt_page_scopes>
+            <show>
+                Mostrar en todas las páginas (a menos que se seleccionen de la lista,
+                en cuyo caso se limitará a mostrarse sólo en las seleccionadas).
+            </show>
+            <hide>Mostrar en todas las páginas excepto las seleccionadas de la lista.</hide>
+        </alt_page_scopes>
+        <editor>
+            <dialog_title>Editor de widget</dialog_title>
+            <basic_details>Detalles básicos</basic_details>
+            <handler>Manejador:</handler>
+            <seed>Semilla:</seed>
+            <title>Título:</title>
+            <user_scope>Alcance de usuarios:</user_scope>
+            <page_scope>Alcance de páginas:</page_scope>
+            <pages>Lista de páginas:</pages>
+            <other_pages_by_tag>
+                <caption>Otras páginas por etiqueta:</caption>
+                <info><![CDATA[
+                    Si hay páginas faltantes en la lista anterior pero conoces su etiqueta,
+                    usa la herramienta siguiente para incluírlas.
+                ]]></info>
+                <add>Añadir</add>
+            </other_pages_by_tag>
+            <custom_settings>Opciones personalizadas</custom_settings>
+        </editor>
+        <add_widget_to_left>Agregar widget a barra izquierda</add_widget_to_left>
+        <add_widget_to_right>Agregar widget a barra derecha</add_widget_to_right>
     </admin>
-
+    
+    <page_tags>
+        <home>Página principal</home>
+        <post_author_index>Índice de entradas por autor</post_author_index>
+        <post_category_index>Índice de entradas por categoría</post_category_index>
+        <post_tag_index>Índice de entradas por etiqueta</post_tag_index>
+        <post_archive>Histórico de entradas</post_archive>
+        <single_post>Entradas individuales</single_post>
+        <media_author_index>Índice de medios por autor</media_author_index>
+        <media_category_index>Índice de medios por categoría</media_category_index>
+        <media_tag_index>Índice de medios por etiqueta</media_tag_index>
+        <media_archive>Histórico de medios</media_archive>
+        <search_results>Resultados de búsqueda</search_results>
+        <user_home>Perfil de usuario</user_home>
+        <user_mentions>Menciones de usuario</user_mentions>
+        <compound_tag_index>Índice de resultados compuestos de etiquetas</compound_tag_index>
+    </page_tags>
+    
     <settings_data>
         <title>Widgets</title>
         
-        <specs key="ls_layout">
+        <specs key="ls_layout" highlight_class="sensitive">
             <title>Distribución en barra izquierda</title>
             <description><![CDATA[
-                Widget activos en la barra lateral. Se especifica uno en cada línea usando la siguiente sintaxis:<br>
-                <code>nombre_modulo.id_widget | id_semilla | título | alcance_usuarios | alcance_pagina | lista_paginas </code>
-                <ul>
-                    <li>
-                        <code>alcance_usuarios</code> debe ser uno de <code>all</code> (todos), <code>online</code>
-                        (conectados) y <code>offline</code> (desconectados).<br>
-                    </li>
-                    <li>
-                        <code>alcance_pagina</code> debe ser cualquiera de <code>show</code> (mostrar) o <code>hide</code>
-                        (ocultar).<br>
-                    </li>
-                    <li>
-                        <code>lista_paginas</code> es una lista de los <u>tags internos</u> de página separados por comas:<br>
-                        
-                        <code>home</code> (página principal del website),
-                        
-                        <code>post_author_index</code> (índice de entradas por autor), <code>post_category_index</code> (índice de entradas por categoría), <code>post_tag_index</code> (índice de entradas por etiqueta),
-                        <code>post_archive</code> (histórico de entradas), <code>single_post</code> (entradas individual),
-                        
-                        <code>media_author_index</code> (índice de medios por autor), <code>media_category_index</code> (índice de medios por categoría), <code>media_tag_index</code> (índice de medios por etiqueta),
-                        <code>media_archive</code> (histórico de medios), <code>search_results</code> (resultados de búsqueda), <code>user_home</code> (página principal de perfil de usuario),
-                         
-                        <code>user_mentions</code> (página de menciones de usuario),
-                        <code>compound_tag_index</code> (índice de resultados compuestos de etiquetas)
-                    </li>
-                </ul>
+                Widget activos en la barra lateral izquierda. Mostrado como dato meramente informativo.
             ]]></description>
             <type>code</type>
         </specs>
         
-        <specs key="rs_layout" references="page_tag">
+        <specs key="rs_layout" references="page_tag" highlight_class="sensitive">
             <title>Distribución en barra derecha</title>
             <description><![CDATA[
-                Widget activos en la barra lateral. Se especifica uno en cada línea usando la siguiente sintaxis:<br>
-                <code>nombre_modulo.id_widget | id_semilla | título | alcance_usuarios | alcance_pagina | lista_paginas </code>
-                <ul>
-                    <li>
-                        <code>alcance_usuarios</code> debe ser uno de <code>all</code> (todos), <code>online</code>
-                        (conectados) y <code>offline</code> (desconectados).<br>
-                    </li>
-                    <li>
-                        <code>alcance_pagina</code> debe ser cualquiera de <code>show</code> (mostrar) o <code>hide</code>
-                        (ocultar).<br>
-                    </li>
-                    <li>
-                        <code>lista_paginas</code> es una lista de los <u>tags internos</u> de página separados por comas:<br>
-                        
-                        <code>home</code> (página principal del website),
-                        
-                        <code>post_author_index</code> (índice de entradas por autor), <code>post_category_index</code> (índice de entradas por categoría), <code>post_tag_index</code> (índice de entradas por etiqueta),
-                        <code>post_archive</code> (histórico de entradas), <code>single_post</code> (entradas individual),
-                        
-                        <code>media_author_index</code> (índice de medios por autor), <code>media_category_index</code> (índice de medios por categoría), <code>media_tag_index</code> (índice de medios por etiqueta),
-                        <code>media_archive</code> (histórico de medios), <code>search_results</code> (resultados de búsqueda), <code>user_home</code> (página principal de perfil de usuario),
-                         
-                        <code>user_mentions</code> (página de menciones de usuario),
-                        <code>compound_tag_index</code> (índice de resultados compuestos de etiquetas)
-                    </li>
-                </ul>
+                Widget activos en la barra lateral derecha. Mostrado como dato meramente informativo.
             ]]></description>
             <type>code</type>
         </specs>
@@ -89,7 +101,39 @@
         <text>
             <title>Texto</title>
             <info>Texto plano o código HTML/PHP arbitrario.</info>
+            <editable_specs>
+                <specs key="contents">
+                    <title>Contenido</title>
+                    <description><![CDATA[
+                        Texto plano o código HTML o código PHP. Si deseas usar PHP,
+                        debes usar sólo PHP y abrir el código con la etiqueta de apertura de PHP
+                        (<code>&lt?php</code>).
+                    ]]></description>
+                    <type>code</type>
+                </specs>
+            </editable_specs>
         </text>
+        <left_links>
+            <title>Lista de vínculos</title>
+            <info>Lista de vínculos en HTML</info>
+            <editable_specs>
+                <specs key="contents">
+                    <title>Contenido</title>
+                    <description><![CDATA[
+                        Código HTML para items.
+                        Cada <code>&lt;span></code> o anchor (<code>&lt;a></code>)
+                        debe tener la clase <code>item</code>.<br>
+                        Cada elemento se muestra en una sola línea.<br>
+                        Ejemplos:
+                        <pre>&lt;a class="item" href="<code>una-url</code>"><code>Link normal</code>&lt;/a>
+                        &lt;a class="item important" href="<code>otra-url</code>"><code>Link importante</code>&lt;/a>
+                        &lt;a class="item selected" href="<code>otra-url</code>"><code>Link seleccionado</code>&lt;/a>
+                        &lt;a class="item highlighted" href="<code>otra-url</code>"><code>Link resaltado</code>&lt;/a></pre>
+                    ]]></description>
+                    <type>code</type>
+                </specs>
+            </editable_specs>
+        </left_links>
     </widgets>
     
     <messages>
@@ -97,6 +141,12 @@
         <template_file_not_found>El archivo {$file} no se ha encontrado en la plantilla. Favor de checar que la plantilla tenga capacidad para este tipo de widget.</template_file_not_found>
         <rs_widget_type_not_supported>El tipo de widget especificado no está soportado en la barra lateral derecha.</rs_widget_type_not_supported>
         <widget_file_not_found>No se encuentra el archivo "{$file}" para el widget "{$widget}" en {$module}/widgets</widget_file_not_found>
+        <invalid_data_received>Datos inválidos recibidos! La información no está formada conforme se requiere</invalid_data_received>
+        <widget_data_saved>Datos de widget "{$widget}" guardados con éxito</widget_data_saved>
+        <widget_data_deleted>Datos de widget "{$widget}" eliminados con éxito</widget_data_deleted>
+        <sidebar_widgets_saved>Widgets para "{$sidebar}" guardados con éxito</sidebar_widgets_saved>
+        <invalid_sidebar>Disculpa, pero has proporcionado una barra inválida</invalid_sidebar>
+        <no_widgets_found>Lo sentimos, pero no hay widgets disponibles para colocar.</no_widgets_found>
     </messages>
     
 </language>

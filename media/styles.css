@@ -1,0 +1,25 @@
+
+ul.sortable                { list-style: none; margin: 0 0 10px 0; padding: 0; }
+ul.sortable li             { margin: 10px 0; padding: 5px 5px 5px 20px; font-family: Arial, Helvetica, sans-serif;  }
+ul.sortable li:first-child { margin-top:    0; }
+ul.sortable li:last-child  { margin-bottom: 0; }
+
+ul.sortable li .info           { font-size: 10pt; color: dimgrey; }
+ul.sortable li .framed_content { font-size: 11pt; margin: 5px 5px 0 0 }
+
+ul.sortable .handle {
+    position: absolute;
+    margin-left: -14px;
+    cursor: n-resize;
+    border-radius: 2px;
+    color: dimgrey;
+}
+
+.placed_widgets .widget.modified { border-color: darkgreen; }
+.placed_widgets .widget.modified .title:after { content: "*"; }
+
+.placed_widgets .widget[data-is-being-edited="true"] .handle { display: none; }
+
+.missing_page_tags .missing_page_tag_entry                      { white-space: nowrap; }
+.missing_page_tags .missing_page_tag_entry input[type="text"]   { width: calc(100% - 37px); }
+.missing_page_tags .missing_page_tag_entry button               { width: 32px; text-align: center; }
