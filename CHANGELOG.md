@@ -1,6 +1,10 @@
 
 # Widgets Manager Change Log
 
+## [2.0.1] - 2017-05-25
+
+- Added level-based filtering for items on the "links" sidebar widget.
+
 ## [2.0.0] - 2017-05-13
 
 - Added widgets editor.
