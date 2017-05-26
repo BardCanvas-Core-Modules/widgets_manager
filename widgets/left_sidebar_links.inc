@@ -24,7 +24,9 @@ use hng2_base\module;
 use hng2_base\template;
 use hng2_modules\widgets_manager\toolbox;
 
-global $config;
+global $config, $account;
+
+include_once ROOTPATH . "/lib/phpQuery-onefile.php";
 
 if( empty($config->globals["widgets_manager:toolbox"]) )
     $config->globals["widgets_manager:toolbox"] = new toolbox();
@@ -39,4 +41,15 @@ if( empty($data["contents"]) ) return "";
 if( preg_match('/(<\?|<\?php)\s+(.*)\s*(\?>)?/i', $data["contents"], $matches) )
     return eval($matches[2]);
 
-return $data["contents"];
+$pq = phpQuery::newDocumentHTML($data["contents"]);
+
+foreach($config->user_levels_by_level as $level => $caption)
+{
+    $pq->find(".item[data-min-level='$level']")->each(function($element) {
+        global $account;
+        if( pq($element)->attr("data-min-level") > $account->level )
+            pq($element)->remove();
+    });
+}
+
+return $pq->html();
