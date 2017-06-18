@@ -1,6 +1,10 @@
 
 # Widgets Manager Change Log
 
+## [2.0.2] - 2017-06-17
+
+- Fixed error that, on some cases, prevented widgets from being added.
+
 ## [2.0.1] - 2017-05-25
 
 - Added level-based filtering for items on the "links" sidebar widget.
