@@ -232,7 +232,7 @@ function show_widget_addition_form(sidebar)
                     icons: { primary: "ui-icon-check" },
                     click: function() { insert_selected_widget(sidebar); }
                 }, {
-                    text:  cancel_caption,
+                    text:  weditor_cancel_caption,
                     icons: { primary: "ui-icon-cancel" },
                     click: function() { $(this).dialog('close'); }
                 }

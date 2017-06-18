@@ -49,7 +49,7 @@ use hng2_modules\widgets_manager\toolbox;
     var wcreator_title_right   = '<?= $current_module->language->admin->add_widget_to_right ?>';
 </script>
 <link rel="stylesheet"        href="<?= $current_module->get_url() ?>/media/styles~v1.0.0-2.css">
-<script type="text/javascript" src="<?= $current_module->get_url() ?>/media/functions~v1.0.0-9.js"></script>
+<script type="text/javascript" src="<?= $current_module->get_url() ?>/media/functions~v1.0.1-1.js"></script>
 
 <h1 class="clearfix">
     <button class="pull-right" onclick="location.href = '<?= $_SERVER["PHP_SELF"] ?>?wasuuup=<?= md5(mt_rand(1, 65535)) ?>'">
