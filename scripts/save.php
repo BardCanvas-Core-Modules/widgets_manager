@@ -24,6 +24,14 @@ $incoming_widgets = array();
 # Forging of incoming collections
 #
 
+if( empty($_POST["widgets"]) ) $_POST["widgets"] = array();
+if( empty($_POST["widgets"]["left_sidebar"])  ) $_POST["widgets"]["left_sidebar"] = array();
+if( empty($_POST["widgets"]["right_sidebar"]) ) $_POST["widgets"]["right_sidebar"] = array();
+
+if( empty($_POST["widgets_order"]) ) $_POST["widgets_order"] = array();
+if( empty($_POST["widgets_order"]["left_sidebar"])  ) $_POST["widgets_order"]["left_sidebar"] = array();
+if( empty($_POST["widgets_order"]["right_sidebar"]) ) $_POST["widgets_order"]["right_sidebar"] = array();
+
 foreach($_POST["widgets"] as $sidebar => $sidebar_widgets)
 {
     if( ! is_array($sidebar_widgets) ) die($current_module->language->messages->invalid_data_received);
