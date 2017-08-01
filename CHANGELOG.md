@@ -1,6 +1,10 @@
 
 # Widgets Manager Change Log
 
+## [2.0.3] - 2017-08-01
+
+- Added checks to avoid warnings when saving empty sidebars.
+
 ## [2.0.2] - 2017-06-17
 
 - Fixed error that, on some cases, prevented widgets from being added.
