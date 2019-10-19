@@ -154,6 +154,35 @@ header("Content-Type: text/html; charset=utf-8");
                             <?= trim($child) ?>
                         </label><br>
                     <? endforeach ?>
+                    <?
+                    $other_tags_collection = array();
+                    foreach($modules as $module)
+                    {
+                        if( empty($module->language->page_tags) ) continue;
+                        if( $module->name == $current_module->name ) continue;
+                        
+                        foreach($module->language->page_tags->children() as $node)
+                        {
+                            $name    = $node->getName();
+                            $caption = trim($node);
+                            $class   = empty($node["class"]) ? "alternate" : $node["class"];
+                            
+                            $checked = "";
+                            if( in_array($name, $placed_widget->page_tags) )
+                            {
+                                $checked = "checked";
+                                $index   = array_search($name, $placed_widget->page_tags);
+                                unset($placed_widget->page_tags[$index]);
+                            }
+                            ?>
+                            <label class="<?= $class ?>">
+                                <input type="checkbox" name="page_tags[]" <?= $checked ?> value="<?= $name ?>">
+                                <?= $caption ?>
+                            </label><br>
+                            <?
+                        }
+                    }
+                    ?>
                 </div>
                 <?
                 $missing_page_tags = array();
