@@ -1,6 +1,10 @@
 
 # Widgets Manager Change Log
 
+## [2.1.0] - 2019-10-19
+
+- Added support for page tags defined by other modules in the widgets selector.
+
 ## [2.0.3] - 2017-08-01
 
 - Added checks to avoid warnings when saving empty sidebars.
