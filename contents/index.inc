@@ -9,13 +9,12 @@
  * @var module[]          $modules
  * @var module            $current_module
  * @var \SimpleXMLElement $language
- * @var toolbox           $toolbox
- * @var placed_widget     $widget
  */
 
 use hng2_base\module;
-use hng2_modules\widgets_manager\placed_widget;
 use hng2_modules\widgets_manager\toolbox;
+
+$toolbox = new toolbox();
 ?>
 
 <!-- Expandible Text Area -->
