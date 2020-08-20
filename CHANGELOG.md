@@ -1,6 +1,10 @@
 
 # Widgets Manager Change Log
 
+## [2.1.1] - 2020-08-18
+
+- Relocated toolbox instantiation to avoid conflicts with other modules.
+
 ## [2.1.0] - 2019-10-19
 
 - Added support for page tags defined by other modules in the widgets selector.
